@@ -1,0 +1,1 @@
+extends: '@zakodium/eslint-config/adonis'
