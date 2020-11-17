@@ -35,7 +35,7 @@ TODO
 
 [npm-image]: https://img.shields.io/npm/v/adonis-react.svg
 [npm-url]: https://www.npmjs.com/package/adonis-react
-[ci-image]: https://github.com/zakodium/adonis-react/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-image]: https://github.com/zakodium/adonis-react/workflows/Node.js%20CI/badge.svg?branch=main
 [ci-url]: https://github.com/zakodium/adonis-react/actions?query=workflow%3A%22Node.js+CI%22
 [download-image]: https://img.shields.io/npm/dm/adonis-react.svg
 [download-url]: https://www.npmjs.com/package/adonis-react
