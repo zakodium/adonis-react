@@ -17,7 +17,8 @@ This provider requires AdonisJS v5 preview and won't work with AdonisJS v4.
 ## Installation
 
 ```console
-npm i adonis-react
+npm i adonis-react react react-dom
+npm i -D @types/react
 node ace invoke adonis-react
 ```
 
