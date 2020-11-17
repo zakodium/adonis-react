@@ -2,7 +2,7 @@ import { ApplicationContract } from '@ioc:Adonis/Core/Application';
 
 import { prepareReact } from '../src/React';
 
-export default class MongodbProvider {
+export default class ReactProvider {
   public static needsApplication = true;
   public constructor(protected app: ApplicationContract) {}
 

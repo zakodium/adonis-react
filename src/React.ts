@@ -15,17 +15,8 @@ class ReactInstance {
   }
 
   public render(Component: any, props?: Record<string, unknown>): string {
-    return `
-      <html>
-        <head>
-          <link rel="stylesheet" href="/styles.css" />
-        </head>
-        <body>
-          ${renderToStaticMarkup(
-            createElement(Component, { ...this.props, ...props }),
-          )}
-        </body>
-      </html>
-    `;
+    return renderToStaticMarkup(
+      createElement(Component, { ...this.props, ...props }),
+    );
   }
 }

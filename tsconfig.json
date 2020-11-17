@@ -9,7 +9,8 @@
     "strict": true,
     "target": "es2019",
     "skipLibCheck": true,
-    "types": ["@adonisjs/core", "@types/jest"]
+    "types": ["@adonisjs/core", "@types/jest"],
+    "jsx": "react"
   },
   "include": ["./src/**/*", "./providers/**/*"]
 }
