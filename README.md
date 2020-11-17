@@ -12,7 +12,7 @@ React provider for AdonisJS.
 
 ## Prerequisites
 
-This provider requires Adonis v5 preview and won't work with Adonis v4.
+This provider requires AdonisJS v5 preview and won't work with AdonisJS v4.
 
 ## Installation
 
