@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.2](https://www.github.com/zakodium/adonis-react/compare/v0.0.1...v0.0.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* **types:** expose share method ([2ee57cc](https://www.github.com/zakodium/adonis-react/commit/2ee57cc9a352a902a1bc07cbfdafd51e1267db06))
+
 ### 0.0.1 (2020-11-17)
 
 
