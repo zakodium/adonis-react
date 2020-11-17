@@ -1,6 +1,6 @@
 {
   "name": "adonis-react",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "React provider for AdonisJS 5",
   "main": "./lib/providers/ReactProvider.js",
   "types": "./lib/src/types.d.ts",
