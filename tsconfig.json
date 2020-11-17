@@ -8,8 +8,8 @@
     "inlineSourceMap": true,
     "strict": true,
     "target": "es2019",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["@adonisjs/core", "@types/jest"]
   },
-  "include": ["./src/**/*", "./providers/**/*"],
-  "types": ["@adonisjs/core", "@types/jest"]
+  "include": ["./src/**/*", "./providers/**/*"]
 }
