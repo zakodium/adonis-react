@@ -25,10 +25,16 @@ declare module '@ioc:React' {
   export function useAdonisContext(): AdonisContextContract;
 }
 declare module '@ioc:Adonis/Core/HttpContext' {
+  // eslint-disable-next-line import/order
+  import { ComponentPropsWithoutRef, ComponentType } from 'react';
+
   interface HttpContextContract {
     react: {
       share(obj: Record<string, unknown>): void;
-      render(Component: any, props?: Record<string, unknown>): string;
+      render<T>(
+        Component: ComponentType<T>,
+        props?: ComponentPropsWithoutRef<ComponentType<T>>,
+      ): string;
     };
   }
 }

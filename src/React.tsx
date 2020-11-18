@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ComponentPropsWithoutRef, ComponentType } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application';
@@ -56,10 +56,14 @@ class ReactInstance {
     Object.assign(this.context, obj);
   }
 
-  public render(Component: any, props?: Record<string, unknown>): string {
+  public render<T>(
+    Component: ComponentType<T>,
+    props?: ComponentPropsWithoutRef<ComponentType<T>>,
+  ): string {
     return renderToStaticMarkup(
       // @ts-ignore
       <AdonisContextProvider value={this.context}>
+        {/* @ts-ignore */}
         <Component {...props} />
       </AdonisContextProvider>,
     );
