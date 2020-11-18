@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.0](https://www.github.com/zakodium/adonis-react/compare/v0.0.1...v0.1.0) (2020-11-18)
+
+
+### Features
+
+* introduce useAdonisContext ([954e9ca](https://www.github.com/zakodium/adonis-react/commit/954e9ca07e30bbb6d2c40061e9d09b019095f527))
+
+
+### Bug Fixes
+
+* improve types for passing props ([9301c19](https://www.github.com/zakodium/adonis-react/commit/9301c197ce5f2a8e53c55b685165767d82f0dc08))
+* **types:** expose share method ([2ee57cc](https://www.github.com/zakodium/adonis-react/commit/2ee57cc9a352a902a1bc07cbfdafd51e1267db06))
+
 ### 0.0.1 (2020-11-17)
 
 
