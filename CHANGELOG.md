@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/zakodium/adonis-react/compare/v0.1.0...v0.1.1) (2020-11-21)
+
+
+### Bug Fixes
+
+* add html doctype to the output ([a446265](https://www.github.com/zakodium/adonis-react/commit/a4462653da69569f47e64eb06e3e43003a777d83))
+
 ## [0.1.0](https://www.github.com/zakodium/adonis-react/compare/v0.0.1...v0.1.0) (2020-11-18)
 
 
