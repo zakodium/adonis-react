@@ -60,12 +60,13 @@ class ReactInstance {
     Component: ComponentType<T>,
     props?: ComponentPropsWithoutRef<ComponentType<T>>,
   ): string {
-    return renderToStaticMarkup(
+    const html = renderToStaticMarkup(
       // @ts-ignore
       <AdonisContextProvider value={this.context}>
         {/* @ts-ignore */}
         <Component {...props} />
       </AdonisContextProvider>,
     );
+    return `<!DOCTYPE html>\n${html}`;
   }
 }
