@@ -16,7 +16,7 @@ export default class ReactProvider {
   }
 
   public boot() {
-    this.app.container.with(
+    this.app.container.withBindings(
       [
         'Adonis/Core/HttpContext',
         'Adonis/Core/Application',

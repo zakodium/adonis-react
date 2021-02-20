@@ -3,11 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { ApplicationContract } from '@ioc:Adonis/Core/Application';
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
-import {
-  RouterContract,
-  MakeUrlOptions,
-  MakeSignedUrlOptions,
-} from '@ioc:Adonis/Core/Route';
+import { RouterContract } from '@ioc:Adonis/Core/Route';
 
 import { AdonisContextProvider } from './adonisContext';
 
@@ -23,27 +19,11 @@ export function prepareReact(
     request: ctx.request,
     params: ctx.params,
     route: ctx.route,
-    makeUrl: (
-      routeIdentifier: string,
-      options?: MakeUrlOptions,
-      domain?: string,
-    ) => {
-      const url = Route.makeUrl(routeIdentifier, options, domain);
-      if (!url) {
-        throw new Error(`Route ${routeIdentifier} does not exist`);
-      }
-      return url;
+    makeUrl(...args: Parameters<typeof Route.makeUrl>) {
+      return Route.makeUrl(...args);
     },
-    makeSignedUrl: (
-      routeIdentifier: string,
-      options?: MakeSignedUrlOptions,
-      domain?: string,
-    ) => {
-      const url = Route.makeSignedUrl(routeIdentifier, options, domain);
-      if (!url) {
-        throw new Error(`Route ${routeIdentifier} does not exist`);
-      }
-      return url;
+    makeSignedUrl: (...args: Parameters<typeof Route.makeSignedUrl>) => {
+      return Route.makeSignedUrl(...args);
     },
   });
   return instance;
@@ -61,9 +41,9 @@ class ReactInstance {
     props?: ComponentPropsWithoutRef<ComponentType<T>>,
   ): string {
     const html = renderToStaticMarkup(
-      // @ts-ignore
+      // @ts-expect-error Context is filled outside of this class
       <AdonisContextProvider value={this.context}>
-        {/* @ts-ignore */}
+        {/* @ts-expect-error Unsure why this errors */}
         <Component {...props} />
       </AdonisContextProvider>,
     );
