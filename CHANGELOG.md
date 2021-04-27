@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://www.github.com/zakodium/adonis-react/compare/v0.2.0...v0.2.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* fix types ([#7](https://www.github.com/zakodium/adonis-react/issues/7)) ([65f5462](https://www.github.com/zakodium/adonis-react/commit/65f54628d020be88f2fddb4dbf016f35f0a5b225))
+
 ## [0.2.0](https://www.github.com/zakodium/adonis-react/compare/v0.1.1...v0.2.0) (2021-02-20)
 
 
