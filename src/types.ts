@@ -2,7 +2,7 @@ declare module '@ioc:React' {
   import { ApplicationContract } from '@ioc:Adonis/Core/Application';
   import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
   import { RequestContract } from '@ioc:Adonis/Core/Request';
-  import { MakeUrlOptions, MakeSignedUrlOptions } from '@ioc:Adonis/Core/Route';
+  import { RouterContract } from '@ioc:Adonis/Core/Route';
 
   export interface AdonisContextContract {
     app: ApplicationContract;
@@ -10,16 +10,8 @@ declare module '@ioc:React' {
     request: RequestContract;
     params: HttpContextContract['params'];
     route: HttpContextContract['route'];
-    makeUrl: (
-      routeIdentifier: string,
-      params?: any[] | MakeUrlOptions,
-      options?: MakeUrlOptions,
-    ) => string;
-    makeSignedUrl: (
-      routeIdentifier: string,
-      params?: any[] | MakeSignedUrlOptions,
-      options?: MakeSignedUrlOptions,
-    ) => string;
+    makeUrl: RouterContract['makeUrl'];
+    makeSignedUrl: RouterContract['makeSignedUrl'];
   }
 
   export function useAdonisContext(): AdonisContextContract;
