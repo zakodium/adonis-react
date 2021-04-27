@@ -12,13 +12,13 @@ declare module '@ioc:React' {
     route: HttpContextContract['route'];
     makeUrl: (
       routeIdentifier: string,
+      params?: any[] | MakeUrlOptions,
       options?: MakeUrlOptions,
-      domain?: string,
     ) => string;
     makeSignedUrl: (
       routeIdentifier: string,
+      params?: any[] | MakeSignedUrlOptions,
       options?: MakeSignedUrlOptions,
-      domain?: string,
     ) => string;
   }
 
